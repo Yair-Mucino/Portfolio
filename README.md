@@ -1,27 +1,26 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# 👋 Hola, soy Edwin Yair Sandoval Muciño
 
-<div align="center">
-<a href="https://porfolio.dev/">
-<img src="./public/porfolio.webp">
-</a>
-<p></p>
-</div>
+Portafolio personal desarrollado con Astro y Tailwind CSS.
 
-<div align="center">
+## 🚀 Tecnologías
 
-![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
-![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/midudev/porfolio.dev)
-![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/porfolio.dev)
-![GitHub forks](https://img.shields.io/github/forks/midudev/porfolio.dev)
-![GitHub issues](https://img.shields.io/github/issues/midudev/porfolio.dev)
+- Astro
+- Tailwind CSS
+- JavaScript
+- Git
+- GitHub
 
-</div>
+## 📂 Proyectos
 
-## 🫂 Contribuidores
+- Portfolio personal
+- ESTLmarket
+- GetRoasted POS
+- Courier
+- Manzania
 
-<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
-</a>
 
-<p></p>
+## 📫 Contacto
+
+- GitHub: https://github.com/Yair-Mucino
+- LinkedIn: https://www.linkedin.com/in/yair-mucino
+
