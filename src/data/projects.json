@@ -1,17 +1,28 @@
 [
   {
-    "title": "SVGL - A beautiful library with SVG logos",
-    "description": "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    "link": "https://svgl.vercel.app/",
-    "github": "https://github.com/pheralb/svgl",
-    "image": "/projects/svgl.webp",
-    "tags": ["NEXT", "TAILWIND"]
+    "title": "EstlMarket",
+    "description": "Red social universitaria diseñada para facilitar la interacción entre estudiantes mediante el intercambio de productos, tutorías y comunicados institucionales.",
+    "github": "https://github.com/Yair-Mucino/EstlMarket.git",
+    "image": "/projects/imgE1.png",
+    "tags": ["REACT", "TAILWIND"]
   },
   {
-    "title": "AdventJS - Retos de programación con JavaScript y TypeScript",
-    "description": "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    "link": "https://adventjs.dev",
-    "image": "/projects/adventjs.webp",
-    "tags": ["NEXT", "TAILWIND"]
+    "title": "Courier",
+    "description": "Plataforma web orientada a conectar clientes y negocios, optimizando la comunicación y la gestión eficiente de solicitudes y servicios.",
+    "image": "/projects/imgC1.webp",
+    "tags": ["JAVASCRIPT", "POSTGRESQL"]
+  },
+  {
+    "title": "GetRoasted",
+    "description": "Sistema de punto de venta para restaurantes que integra la gestión de ventas, mesas, productos y proveedores en una sola plataforma.",
+    "image": "/projects/imgG1.webp",
+    "tags": ["CSHARP", "WPF", "MYSQL"]
+  },
+  {
+    "title": "Manzania",
+    "description": "Videojuego desarrollado en Unity y C#, enfocado en ofrecer una experiencia interactiva mediante mecánicas y escenarios diseñados desde cero.",
+    "github": "https://github.com/Yair-Mucino/Manzania.git",
+    "image": "/projects/imgM1.webp",
+    "tags": ["UNITY", "CSHARP", "BLENDER"]
   }
 ]

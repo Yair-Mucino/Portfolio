@@ -1,5 +1,5 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
+import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
   {
@@ -20,21 +20,21 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "mailto:yairsm20@gmail.com",
   },
-]
+];
 ---
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
 >
   <nav
-    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent"
+    class="header-nav flex items-center justify-center gap-x-1 rounded-full border border-transparent px-4 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300"
   >
     {
       navItems.map((link) => (
         <a
-          class="nav-link relative text-xs sm:text-sm block px-1.5 sm:px-3 py-2 sm:py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="nav-link relative block rounded-full px-1.5 py-2 text-xs transition-colors duration-200 hover:text-cyan-600 sm:px-3 sm:py-1.5 sm:text-sm dark:hover:text-cyan-300"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,7 +42,8 @@ const navItems = [
         </a>
       ))
     }
-    <div class="ml-2 pl-2 border-l border-gray-300/30 dark:border-white/10">
+
+    <div class="ml-2 border-l border-slate-300/40 pl-2 dark:border-white/10">
       <ThemeToggle />
     </div>
   </nav>
@@ -50,45 +51,55 @@ const navItems = [
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
-    const callback = (entries: any[]) => {
+    const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500", "dark:text-yellow-400", "bg-yellow-400/10")
-              item.classList.remove("text-gray-600", "dark:text-gray-300")
+              item.classList.add(
+                "text-cyan-600",
+                "dark:text-cyan-300",
+                "bg-cyan-500/10",
+                "font-semibold"
+              );
+              item.classList.remove("text-slate-600", "dark:text-slate-300");
             } else {
-              item.classList.remove("text-yellow-500", "dark:text-yellow-400", "bg-yellow-400/10")
-              item.classList.add("text-gray-600", "dark:text-gray-300")
+              item.classList.remove(
+                "text-cyan-600",
+                "dark:text-cyan-300",
+                "bg-cyan-500/10",
+                "font-semibold"
+              );
+              item.classList.add("text-slate-600", "dark:text-slate-300");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
@@ -99,19 +110,16 @@ const navItems = [
   }
 
   .header-nav {
-    @apply dark:bg-gray-900/80 bg-white/60;
-  }
-
-  .nav-link.text-yellow-500 {
-    @apply font-semibold;
+    @apply bg-white/70 dark:bg-slate-950/75;
   }
 
   @keyframes nav-appear {
     0% {
-      @apply dark:bg-gray-900/0 bg-white/0 border-transparent shadow-none;
+      @apply border-transparent bg-white/0 shadow-none dark:bg-slate-950/0;
     }
+
     to {
-      @apply shadow-lg ring-1 backdrop-blur-md ring-white/10 dark:ring-white/5 border-gray-200/20 dark:border-white/5;
+      @apply border-slate-200/40 shadow-lg ring-1 ring-cyan-500/10 backdrop-blur-md dark:border-white/5 dark:ring-cyan-300/10;
     }
   }
 </style>
